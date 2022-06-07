@@ -18,6 +18,8 @@ RUN rm /etc/nginx/conf.d/default.conf
 
 # host pc 의 nginx.conf 를 아래 경로에 복사
 COPY ./nginx.conf /etc/nginx/conf.d
+COPY ./nginx_conf_builder.sh /etc/nginx/conf.d
+RUN chmod +x nginx_conf_builder.sh
 
 # 80 포트 오픈
 EXPOSE 80
